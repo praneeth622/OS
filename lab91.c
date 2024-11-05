@@ -1,3 +1,4 @@
+// Praneeth Devarasetty CS22B1014
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
@@ -9,9 +10,9 @@
 #define HUNGRY 1
 #define EATING 2
 
-int state[N];                     // Array to track the state of each philosopher
-sem_t mutex;                      // Mutex to protect shared data
-sem_t philosophers[N];            // One semaphore per philosopher
+int state[N];                     
+sem_t mutex;                      
+sem_t philosophers[N];            
 
 void think(int philosopher) {
     printf("Philosopher %d is thinking.\n", philosopher);
@@ -73,9 +74,9 @@ int main() {
     pthread_t thread_id[N];
     int philosopher_ids[N];
 
-    sem_init(&mutex, 0, 1);  // Initialize mutex semaphore
+    sem_init(&mutex, 0, 1);  
     for (int i = 0; i < N; i++) {
-        sem_init(&philosophers[i], 0, 0);  // Initialize each philosopher's semaphore
+        sem_init(&philosophers[i], 0, 0);  
         state[i] = THINKING;
         philosopher_ids[i] = i;
     }
