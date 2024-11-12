@@ -1,1 +1,23 @@
-.~
+# Ignore compiled files and binaries
+*.o
+*.out
+*.exe
+*.bin
+*.obj
+
+# Ignore common build output directories
+bin/
+build/
+dist/
+
+# Allow all .c files in any directory
+!**/*.c
+
+# (Optional) Ignore other temporary files and editor configurations
+*.swp
+*.swo
+*.tmp
+*.log
+.DS_Store
+.vscode/
+.idea/

@@ -12,7 +12,7 @@
 
 
 int clients[MAX_CLIENTS] = {0}; // Track client sockets
-pthread_mutex_t lock; // Mutex for collision detection
+pthread_mutex_t lock; 
 
 
 void *handle_client(void *socket_desc) {
@@ -21,8 +21,7 @@ void *handle_client(void *socket_desc) {
     char buffer[1024] = {0};
     char *collision_msg = "Collision detected! Please retry later.";
     char *ack_msg = "Data received successfully!";
-    srand(time(NULL)); // Initialize random number generator
-
+    srand(time(NULL)); // Initialize random number generator\
 
     while(1) {
         // Simulate carrier sensing by reading from client
